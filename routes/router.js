@@ -33,11 +33,17 @@ router.post("/register",  async(req,res)=>{
 })
 
 
-// get userdata
+// get userdata with filters
 
 router.get("/getdata",async(req,res)=>{
+     const { f_name, l_name, email, phone } = req.query;
+        const filters = {};
+        if (f_name) filters.f_name = f_name;
+        if (l_name) filters.l_name = l_name;
+        if (email) filters.email = email;
+        if (phone) filters.phone = phone;
     try {
-        const userdata = await users.find();
+        const userdata = await users.find(filters);
         res.status(201).json(userdata)
         console.log(userdata);
     } catch (error) {
