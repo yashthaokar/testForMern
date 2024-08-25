@@ -1,0 +1,144 @@
+{
+  "info": {
+    "name": "User API",
+    "_postman_id": "c7b2f0f8-7dcb-4a4f-8c88-c4e9d2e6f054",
+    "description": "API Collection for User Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"f_name\": \"John\",\n  \"l_name\": \"Doe\",\n  \"email\": \"johndoe@example.com\",\n  \"phone\": 1234567890\n}"
+        },
+        "url": {
+          "raw": "http://localhost:4000/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/getdata",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "getdata"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Individual User",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/getuser/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "getuser",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "USER_ID_PLACEHOLDER"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"f_name\": \"Jane\",\n  \"l_name\": \"Doe\",\n  \"email\": \"janedoe@example.com\",\n  \"phone\": 9876543210\n}"
+        },
+        "url": {
+          "raw": "http://localhost:4000/updateuser/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "updateuser",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "USER_ID_PLACEHOLDER"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/deleteuser/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "deleteuser",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "USER_ID_PLACEHOLDER"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
