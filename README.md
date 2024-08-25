@@ -1,1 +1,3 @@
 # testForMern
+
+we share .evn for refferal because it doenst have any privacy setup  ... we know not to good to push to github....
