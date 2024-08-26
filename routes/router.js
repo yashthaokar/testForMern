@@ -60,7 +60,7 @@ router.get("/getuser/:id",async(req,res)=>{
 
         const userindividual = await users.findById({_id:id});
         console.log(userindividual);
-        res.status(201).json(userindividual)
+        res.status(200).json(userindividual)
 
     } catch (error) {
         res.status(422).json(error);
@@ -92,7 +92,7 @@ router.delete("/deleteuser/:id",async(req,res)=>{
 
         const deletuser = await users.findByIdAndDelete({_id:id})
         console.log(deletuser);
-        res.status(201).json(deletuser);
+        res.status(200).json({message: "User deleted successfully"});
 
     } catch (error) {
         res.status(422).json(error);
